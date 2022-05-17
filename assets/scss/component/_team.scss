@@ -1,0 +1,50 @@
+@use "../abstract" as *;
+
+/* Team Style*/
+.team-section {
+  .team-members {
+    .single-member {
+      grid-column: auto/span 4;
+      overflow: hidden;
+      position: relative;
+      @media #{$sm} {
+        grid-column: auto / span 12;
+      }
+      @media #{$xs} {
+        grid-column: auto / span 12;
+      }
+      img {
+        width: 100%;
+      }
+      .member-info {
+        position: absolute;
+        bottom: -50%;
+        left: 0;
+        width: 100%;
+        background-color: $dark-gray;
+        padding: 15px;
+        transition: all 0.3s;
+        .member-name {
+          font-weight: 600;
+        }
+        .member-designation {
+          font-size: 14px;
+        }
+        .social-media {
+          a {
+            display: inline-block;
+            padding: 0 5px;
+            &:hover {
+              color: $orange;
+            }
+          }
+        }
+      }
+      &:hover {
+        .member-info {
+          bottom: 0;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,37 @@
+@use "../abstract" as *;
+
+/* Blog Style*/
+.blog-section {
+  .blog-content {
+    .single-blog {
+      grid-column: auto / span 4;
+      @media #{$sm} {
+        grid-column: auto / span 12;
+      }
+      @media #{$xs} {
+        grid-column: auto / span 12;
+      }
+      .blog-meta {
+        margin: 0 25px;
+        margin-bottom: 25px;
+        margin-top: -25px;
+        position: relative;
+        background-color: $white;
+        border: 1px solid $light-gray;
+        padding: 15px 0;
+        display: flex;
+        justify-content: space-around;
+        @media #{$md} {
+          margin: 0;
+          margin-top: -15px;
+          margin-bottom: 15px;
+        }
+      }
+      .blog-info {
+        h4 {
+          margin: 15px 0;
+        }
+      }
+    }
+  }
+}

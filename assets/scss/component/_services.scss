@@ -1,0 +1,38 @@
+@use "../abstract" as *;
+
+/* Services Style*/
+.services-section {
+  .services-content {
+    .single-service {
+      grid-column: auto/span 4;
+      padding: 40px 25px;
+      box-shadow: 0 15px 40px $dark-white;
+      border-bottom: 2px solid transparent;
+      transition: all 0.3s;
+      @media #{$md} {
+        grid-column: auto / span 6;
+      }
+      @media #{$sm} {
+        grid-column: auto / span 12;
+      }
+      @media #{$xs} {
+        grid-column: auto / span 12;
+      }
+      &:hover {
+        border-color: $orange;
+      }
+      i {
+        font-size: 24px;
+        height: 50px;
+        width: 50px;
+        line-height: 50px;
+        border: 1px solid $light-gray;
+        border-radius: 50%;
+      }
+      h4 {
+        margin-top: 10px;
+        margin-bottom: 15px;
+      }
+    }
+  }
+}

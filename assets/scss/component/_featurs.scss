@@ -1,0 +1,81 @@
+@use "../abstract" as *;
+
+/*Featurs Style*/
+.featurs-section {
+  position: relative;
+  &::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    background-image: url("../../assets/img/features/feature-1.jpg");
+    @include background;
+    @media #{$md} {
+      display: none;
+    }
+    @media #{$sm} {
+      display: none;
+    }
+    @media #{$xs} {
+      display: none;
+    }
+  }
+  .featurs-area {
+    &-info {
+      grid-column: auto/span 6;
+      @media #{$md} {
+        grid-column: auto / span 12;
+      }
+      @media #{$sm} {
+        grid-column: auto / span 12;
+      }
+      @media #{$xs} {
+        grid-column: auto / span 12;
+      }
+    }
+    &-boxs {
+      .single-box {
+        grid-column: auto/span 6;
+        @media #{$md} {
+          text-align: center;
+        }
+        @media #{$sm} {
+          grid-column: auto / span 12;
+          text-align: center;
+        }
+        @media #{$xs} {
+          grid-column: auto / span 12;
+          text-align: center;
+        }
+        i {
+          font-size: 28px;
+        }
+        h4 {
+          margin-top: 10px;
+          margin-bottom: 15px;
+        }
+        a {
+          color: $orange;
+        }
+      }
+    }
+  }
+  &.overlay {
+    &::after {
+      width: 50%;
+      left: 50%;
+      z-index: 1;
+      @media #{$md} {
+        display: none;
+      }
+      @media #{$sm} {
+        display: none;
+      }
+      @media #{$xs} {
+        display: none;
+      }
+    }
+  }
+}

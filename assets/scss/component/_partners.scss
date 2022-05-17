@@ -1,0 +1,11 @@
+@use "../abstract" as *;
+
+/* Partner Style*/
+.partner-section {
+  .partners {
+    img {
+      max-width: 150px;
+      display: block;
+    }
+  }
+}

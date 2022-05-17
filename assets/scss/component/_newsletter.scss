@@ -1,0 +1,36 @@
+@use "../abstract" as *;
+
+/* Newsletter Style*/
+.newsletter-section {
+  @include background;
+  .newsletter-form {
+    max-width: 700px;
+    margin: 0 auto;
+    form {
+      width: 100%;
+      position: relative;
+      input[type="text"] {
+        width: 100%;
+        border: none;
+        outline: none;
+        padding: 15px;
+        border-radius: 30px;
+        padding-right: 145px;
+      }
+      input[type="submit"] {
+        display: inline-block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        border: none;
+        outline: none;
+        padding: 15px 30px;
+        background-color: $orange;
+        color: $white;
+        border-radius: 30px;
+        font-weight: 600;
+        text-transform: uppercase;
+      }
+    }
+  }
+}

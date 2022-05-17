@@ -1,0 +1,64 @@
+@use "../abstract" as *;
+
+/* Pricing Style*/
+.pricing-section {
+  .pricing-content {
+    .single-price {
+      grid-column: auto / span 4;
+      padding: 20px;
+      border: 1px solid $dark-gray;
+      @media #{$md} {
+        padding: 15px 10px;
+      }
+      @media #{$sm} {
+        grid-column: auto / span 12;
+      }
+      @media #{$xs} {
+        grid-column: auto / span 12;
+      }
+      .title-area {
+        h5 {
+          font-size: 32px;
+          font-weight: 600;
+          @media #{$md} {
+            font-size: 28px;
+          }
+        }
+      }
+      .price-area {
+        background-color: $dark-white;
+        padding: 20px 0;
+        margin: 20px 0;
+        transition: all 0.3s;
+        h4 {
+          font-size: 50px;
+          font-weight: 700;
+          @media #{$md} {
+            font-size: 40px;
+          }
+          span {
+            font-size: 24px;
+            font-weight: 400;
+            @media #{$md} {
+              font-size: 22px;
+            }
+          }
+        }
+      }
+      .details-area {
+        li {
+          padding: 8px 0;
+          &:not(:last-child) {
+            border-bottom: 1px solid $light-gray;
+          }
+        }
+      }
+      &:hover {
+        .price-area {
+          background-color: $orange;
+          color: $white;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,73 @@
+@use "../abstract" as *;
+
+/*About Style*/
+.about-section {
+  .about-top-content {
+    .about-info {
+      grid-column: auto/span 6;
+      @media #{$md} {
+        grid-column: auto / span 12;
+      }
+      @media #{$sm} {
+        grid-column: auto / span 12;
+      }
+      @media #{$xs} {
+        grid-column: auto / span 12;
+      }
+    }
+    .about-img {
+      grid-column: auto/span 6;
+      @media #{$md} {
+        grid-column: auto / span 12;
+      }
+      @media #{$sm} {
+        grid-column: auto / span 12;
+      }
+      @media #{$xs} {
+        grid-column: auto / span 12;
+      }
+      &-area {
+        img {
+          width: 100%;
+        }
+        position: relative;
+        &::after {
+          position: absolute;
+          content: "";
+          top: 12px;
+          left: 12px;
+          height: 100%;
+          width: 100%;
+          background-color: $orange;
+          z-index: -1;
+          @media #{$sm} {
+            display: none;
+          }
+          @media #{$xs} {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+  .about-bottom-content {
+    .single-box {
+      grid-column: auto/span 4;
+      @media #{$sm} {
+        grid-column: auto / span 12;
+      }
+      @media #{$xs} {
+        grid-column: auto / span 12;
+      }
+      i {
+        font-size: 28px;
+      }
+      h4 {
+        margin: 10px 0 15px;
+      }
+      a {
+        color: $orange;
+      }
+    }
+  }
+}

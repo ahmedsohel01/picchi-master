@@ -1,0 +1,148 @@
+@use "../abstract" as *;
+
+/*Header Style*/
+.header-area {
+  padding: 30px 0;
+  transition: all 0.3s;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  @media #{$md} {
+    padding: 10px 0;
+    background-color: $dark-gray;
+  }
+  @media #{$sm} {
+    padding: 10px 0;
+    background-color: $dark-gray;
+  }
+  @media #{$xs} {
+    padding: 10px 0;
+    background-color: $dark-gray;
+  }
+  &.sticky {
+    padding: 10px 0;
+    background-color: $dark-gray;
+  }
+  .header-part {
+    .logo-part {
+      grid-column: auto/ span 3;
+      @media #{$md} {
+        grid-column: auto / span 12;
+      }
+      @media #{$sm} {
+        grid-column: auto / span 12;
+      }
+      @media #{$xs} {
+        grid-column: auto / span 12;
+      }
+      a {
+        h3 {
+          color: $white;
+          text-transform: uppercase;
+        }
+      }
+    }
+    .menu-part {
+      grid-column: auto / span 9;
+      @media #{$md} {
+        display: none;
+      }
+      @media #{$sm} {
+        display: none;
+      }
+      @media #{$xs} {
+        display: none;
+      }
+      ul {
+        text-align: right;
+        li {
+          display: inline-block;
+          margin-left: 15px;
+          a {
+            display: block;
+            font-family: $fira;
+            font-size: 16px;
+            font-weight: 500;
+            text-transform: uppercase;
+            color: $white;
+            transition: all 0.3s;
+          }
+          &:hover {
+            a {
+              color: $orange;
+            }
+          }
+          &.active {
+            a {
+              color: $orange;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// Mobile Menu
+.slicknav {
+  &_menu {
+    display: none;
+    padding: 0;
+    @media #{$md} {
+      display: block;
+    }
+    @media #{$sm} {
+      display: block;
+    }
+    @media #{$xs} {
+      display: block;
+    }
+  }
+  &_btn {
+    position: fixed;
+    right: 15px;
+    top: 10px;
+    background-color: transparent;
+    z-index: 99999;
+  }
+  &_nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: $dark-gray;
+    z-index: 999;
+    height: 100vh;
+    nav {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+    }
+    ul {
+      flex-grow: 1;
+      text-align: center;
+      margin: 0;
+      padding: 50px;
+      li {
+        padding: 10px 0;
+      }
+    }
+    a {
+      display: block;
+      font-family: $fira;
+      font-size: 16px;
+      font-weight: 500;
+      text-transform: uppercase;
+      color: $white;
+      transition: all 0.3s;
+      &:hover {
+        color: $orange;
+        background: none !important;
+        letter-spacing: 1px;
+      }
+    }
+  }
+}

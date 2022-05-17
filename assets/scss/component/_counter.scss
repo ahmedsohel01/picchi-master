@@ -1,0 +1,29 @@
+@use "../abstract" as *;
+
+/* Process Style*/
+.counter-section {
+  @include background;
+  .counter-area {
+    .single-counter {
+      grid-column: auto/span 3;
+      @media #{$sm} {
+        grid-column: auto / span 6;
+      }
+      @media #{$xs} {
+        grid-column: auto / span 12;
+      }
+      i {
+        font-size: 28px;
+      }
+      h4 {
+        font-size: 50px;
+        font-weight: 700;
+        margin-top: 15px;
+        margin-bottom: 20px;
+      }
+      span {
+        font-size: 28px;
+      }
+    }
+  }
+}

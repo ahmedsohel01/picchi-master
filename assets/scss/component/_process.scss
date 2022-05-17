@@ -1,0 +1,41 @@
+@use "../abstract" as *;
+
+/* Process Style*/
+.process-section {
+  @include background;
+  .process-content {
+    .single-process {
+      grid-column: auto/span 3;
+      @media #{$md} {
+        grid-column: auto / span 6;
+      }
+      @media #{$sm} {
+        grid-column: auto / span 12;
+      }
+      @media #{$xs} {
+        grid-column: auto / span 12;
+      }
+      h4 {
+        font-size: 20px;
+        color: $white;
+        background-color: $orange;
+        border-radius: 3px;
+        padding: 10px;
+        position: relative;
+        span {
+          display: block;
+          position: absolute;
+          top: 0;
+          right: 0;
+          background-color: $orange-hov;
+          padding: 10px 15px;
+        }
+      }
+      p {
+        text-align: center;
+        margin-top: 20px;
+        color: $white;
+      }
+    }
+  }
+}

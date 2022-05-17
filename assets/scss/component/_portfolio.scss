@@ -1,0 +1,46 @@
+@use "../abstract" as *;
+
+/* Portfolio Style*/
+.portfolio-section {
+  .portfolio-content {
+    gap: 0;
+    .single-portfolio {
+      grid-column: auto/ span 4;
+      position: relative;
+      @media #{$md} {
+        grid-column: auto / span 6;
+      }
+      @media #{$sm} {
+        grid-column: auto / span 12;
+      }
+      @media #{$xs} {
+        grid-column: auto / span 12;
+      }
+      .portfolio-info {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+        z-index: 1;
+        transition: all 0.3s;
+        transform: scale(0);
+        a {
+          font-size: 24px;
+        }
+        h4 {
+          margin: 10px 0;
+        }
+      }
+      &:hover {
+        .portfolio-info {
+          transform: scale(1);
+        }
+      }
+    }
+  }
+}

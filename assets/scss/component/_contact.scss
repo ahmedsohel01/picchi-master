@@ -1,0 +1,76 @@
+@use "../abstract" as *;
+
+/* Conatct Style*/
+.contact-section {
+  .contact-area {
+    .contact-info {
+      grid-column: auto/span 6;
+      @media #{$md} {
+        grid-column: auto / span 12;
+      }
+      @media #{$sm} {
+        grid-column: auto / span 12;
+      }
+      @media #{$xs} {
+        grid-column: auto / span 12;
+      }
+      .single-info {
+        grid-column: auto/ span 6;
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        @media #{$xs} {
+          grid-column: auto / span 12;
+        }
+        .icon {
+          i {
+            font-size: 30px;
+            color: $white;
+            background-color: $orange;
+            height: 60px;
+            width: 60px;
+            line-height: 60px;
+            text-align: center;
+          }
+        }
+        .text {
+          h4 {
+            font-size: 24px;
+            font-weight: 600;
+            text-transform: uppercase;
+          }
+        }
+      }
+    }
+    .contact-form {
+      grid-column: auto / span 6;
+      @media #{$md} {
+        grid-column: auto / span 12;
+      }
+      @media #{$sm} {
+        grid-column: auto / span 12;
+      }
+      @media #{$xs} {
+        grid-column: auto / span 12;
+      }
+      form {
+        width: 100%;
+        input,
+        textarea {
+          width: 100%;
+          padding: 15px;
+          border: 1px solid $light-gray;
+          outline: 0;
+          margin-bottom: 10px;
+        }
+        input[type="submit"] {
+          background-color: $orange;
+          color: $white;
+          font-weight: 600;
+          text-transform: uppercase;
+          border-color: $orange;
+        }
+      }
+    }
+  }
+}

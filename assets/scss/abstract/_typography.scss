@@ -1,0 +1,37 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;500;600;700&family=Roboto:wght@400;500&display=swap");
+
+$fira: "Fira Sans", sans-serif;
+$roboto: "Roboto", sans-serif;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: $roboto;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+}
+
+$heading: (h1, 48px, 700, 40px), (h2, 40px, 700, 40px), (h3, 35px, 600, 35px),
+  (h4, 28px, 400, 28px), (h5, 22px, 400, 28px), (h6, 16px, 400, 28px);
+@each $title, $font-size, $font-weight, $line-height in $heading {
+  #{$title} {
+    font-family: $fira;
+    font-size: $font-size;
+    font-weight: $font-weight;
+    line-height: $line-height;
+  }
+}
+
+$text-align: left, right, center;
+@each $i in $text-align {
+  .text-#{$i} {
+    text-align: $i;
+  }
+}

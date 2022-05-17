@@ -1,0 +1,163 @@
+@use "../abstract" as *;
+
+/* Reset Style*/
+.container {
+  width: 1170px;
+  margin: 0 auto;
+  padding: 0 15px;
+  @media #{$xxl} {
+    width: 1320px;
+    padding: 0 20px;
+  }
+  @media #{$lg} {
+    width: 960px;
+    padding: 0 16px;
+  }
+  @media #{$md} {
+    width: 100%;
+  }
+  @media #{$sm} {
+    width: 100%;
+  }
+  @media #{$xs} {
+    width: 100%;
+  }
+}
+.row {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  align-items: center;
+  gap: 30px;
+  @media #{$sm} {
+    gap: 10px;
+  }
+  @media #{$xs} {
+    gap: 10px;
+  }
+}
+.overlay {
+  position: relative;
+  z-index: 1;
+  &::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: $dark-gray;
+    opacity: 0.75;
+    z-index: -1;
+  }
+}
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.3s;
+}
+ul {
+  list-style: none;
+}
+img {
+  width: 100%;
+  vertical-align: middle;
+}
+p {
+  margin-bottom: 15px;
+}
+/*Common Style*/
+.text-white {
+  color: $white;
+}
+/*Background Color*/
+.bg-gray {
+  background-color: $dark-white;
+}
+.bg-dark-gray {
+  background-color: $dark-gray;
+}
+
+/*Button Style*/
+.btn {
+  display: inline-block;
+  font-family: $fira;
+  font-size: 17px;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: $white;
+  padding: 10px 25px;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  @media #{$md} {
+    padding: 5px 18px;
+    font-size: 16px;
+    border-radius: 3px;
+  }
+  &.btn-filled {
+    background-color: $orange;
+    &:hover {
+      background-color: $orange-hov;
+    }
+  }
+  &.btn-outline {
+    border-color: $orange;
+    &.color {
+      color: $orange;
+    }
+    &:hover {
+      border-color: $orange-hov;
+    }
+  }
+}
+
+/*Section Title*/
+.section-title-area {
+  max-width: 700px;
+  margin: 0 auto 50px;
+  .section-title {
+    text-transform: uppercase;
+    margin-top: 15px;
+    margin-bottom: 25px;
+    position: relative;
+
+    @media #{$xs} {
+      font-size: 34px;
+    }
+    &::after {
+      position: absolute;
+      content: "";
+      bottom: -15px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 110px;
+      height: 3px;
+      background-color: $orange;
+    }
+    &-pre {
+      display: inline-block;
+      font-family: $fira;
+      font-size: 18px;
+      font-weight: 500;
+      color: $dark-gray;
+      text-transform: uppercase;
+      &.text-white {
+        color: $white;
+      }
+    }
+  }
+}
+
+/*ScrollUP*/
+#scrollUp {
+  background: #7dba2f;
+  height: 35px;
+  width: 35px;
+  right: 40px;
+  bottom: 40px;
+  color: #fff;
+  font-size: 20px;
+  text-align: center;
+  border-radius: 50%;
+  font-size: 20px;
+  line-height: 34px;
+}

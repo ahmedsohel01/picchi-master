@@ -1,0 +1,12 @@
+@use "../abstract" as *;
+
+/* Footer Style*/
+.footer-solial {
+  a {
+    display: inline-block;
+    padding: 0 5px;
+    &:hover {
+      color: $orange;
+    }
+  }
+}

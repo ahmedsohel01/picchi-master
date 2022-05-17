@@ -1,0 +1,46 @@
+@use "../abstract" as *;
+
+/*Banner Style*/
+.banner-section {
+  @include background;
+  height: 100vh;
+  .banner-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    h4 {
+      color: $dark-white;
+      text-transform: capitalize;
+    }
+    h1 {
+      font-size: 55px;
+      color: $dark-white;
+      text-transform: uppercase;
+      margin: 25px 0;
+      @media #{$md} {
+        font-size: 50px;
+      }
+      @media #{$sm} {
+        font-size: 40px;
+      }
+      @media #{$xs} {
+        font-size: 32px;
+        line-height: 1.25;
+      }
+    }
+    p {
+      color: $white;
+    }
+    a {
+      margin: 0 10px;
+      @media #{$sm} {
+        margin: 0 5px;
+      }
+      @media #{$xs} {
+        margin: 5px;
+      }
+    }
+  }
+}
